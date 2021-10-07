@@ -1,0 +1,29 @@
+@import "../../assets/sass/mixines.scss";
+@import "../../assets/sass/variables.scss";
+
+.dish-card {
+  height: 440px;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffd3b4;
+  img {
+    height: 45%;
+    display: inline-block;
+    object-fit: contain;
+  }
+  &__info {
+    padding: 25px 25px;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: $primary;
+    }
+    p {
+      color: $primary;
+      height: 120px;
+      overflow: auto;
+      @include scroll-style;
+    }
+  }
+}
