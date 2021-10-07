@@ -3,4 +3,7 @@
 .random-dish {
   background-color: $main-bg-color;
   height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
