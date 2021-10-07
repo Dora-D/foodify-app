@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 
+import { Modal } from "../../components/Modal/Modal";
+
 import plusIcon from "../../assets/imgs/plus-icon.svg";
 import "./favourites.scss";
 
@@ -16,7 +18,7 @@ export const Favourites = () => {
       <button className="favourites__add-recipe" onClick={hendleModal}>
         <img src={plusIcon} alt="Plus Recipe" />
       </button>
-      {isModal && createPortal(<h1>Portal</h1>, portal)}
+      {isModal && createPortal(<Modal />, portal)}
     </div>
   );
 };
