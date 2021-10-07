@@ -1,0 +1,19 @@
+@import "../../assets/sass/variables.scss";
+
+.favourites {
+  height: calc(100vh - 55px);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $main-bg-color;
+  position: relative;
+  &__add-recipe {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+}
