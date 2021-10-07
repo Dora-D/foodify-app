@@ -9,7 +9,7 @@ export const App: FC = () => (
   <Router>
     <Header />
     <Switch>
-      <Route path="/" component={RandomDish} />
+      <Route path="/" component={RandomDish} exact />
       <Route path="/favourites" component={Favourites} />
     </Switch>
   </Router>

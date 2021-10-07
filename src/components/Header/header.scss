@@ -1,0 +1,22 @@
+@import "../../assets/sass/variables.scss";
+
+.header {
+  padding: 0 80px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #98ddca;
+  ul {
+    display: flex;
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+    a {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
