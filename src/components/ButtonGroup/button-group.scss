@@ -1,0 +1,20 @@
+.button-group {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    height: 40px;
+    flex-basis: 47%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    &:first-of-type {
+      background-color: #d83a56;
+    }
+    &:last-of-type {
+      background-color: #6ecb63;
+    }
+  }
+}

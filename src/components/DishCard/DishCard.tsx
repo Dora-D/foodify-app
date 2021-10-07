@@ -1,9 +1,9 @@
 import { FC } from "react";
 
-import { IDishes } from "../../static";
+import { IDish } from "../../static";
 import "./dish-card.scss";
 
-export const DishCard: FC<IDishes> = ({ dishImg, title, recipe }) => {
+export const DishCard: FC<IDish> = ({ dishImg, title, recipe }) => {
   return (
     <div className="dish-card">
       <div className="dish-card__img-wrapper">

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 
+import { DishCard } from "../../components/DishCard/DishCard";
 import { Modal } from "../../components/Modal/Modal";
 
-import { BaseFavouritesDishes, IDishes } from "../../static";
+import { BaseFavouritesDishes, IDish } from "../../static";
 import plusIcon from "../../assets/imgs/plus-icon.svg";
 import "./favourites.scss";
 
 export const Favourites = () => {
   const [favouritesDishes, setFavouritesDishes] =
-    useState<IDishes[]>(BaseFavouritesDishes);
+    useState<IDish[]>(BaseFavouritesDishes);
 
   const [isModal, setIsModal] = useState<boolean>(false);
 
@@ -23,6 +24,9 @@ export const Favourites = () => {
 
   return (
     <div className="favourites">
+      {favouritesDishes.map((dish: IDish) => (
+        <DishCard key={dish.id} {...dish} />
+      ))}
       <button className="favourites__add-recipe" onClick={hendleModal}>
         <img src={plusIcon} alt="Plus Recipe" />
       </button>
