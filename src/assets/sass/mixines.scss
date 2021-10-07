@@ -14,4 +14,7 @@
   border: none;
   border-radius: 6px;
   font-size: 1rem;
+  &:focus {
+    border: 2px solid black;
+  }
 }

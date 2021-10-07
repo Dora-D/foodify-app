@@ -17,7 +17,10 @@ export const RandomDish = () => {
 
   return (
     <div className="random-dish">
-      <DishCard {...randomDish} />
+      {
+        //@ts-ignore
+        <DishCard {...randomDish} />
+      }
     </div>
   );
 };
