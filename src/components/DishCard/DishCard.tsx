@@ -1,16 +1,22 @@
+import { FC } from "react";
+
 import "./dish-card.scss";
 
-export const DishCard = () => {
+interface IDishCard {
+  dishImg?: string;
+  title: string;
+  recipe: string;
+}
+
+export const DishCard: FC<IDishCard> = ({ dishImg, title, recipe }) => {
   return (
     <div className="dish-card">
-      <img src="" alt="Dish Img" />
+      <div className="dish-card__img-wrapper">
+        <img src={dishImg} alt="Dish Img" />
+      </div>
       <div className="dish-card__info">
-        <h2>Titile</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          veritatis sint debitis incidunt commodi? Nulla ducimus porro sed
-          deleniti accusamus perferendis quas, possimus libero adipisci
-        </p>
+        <h2>{title}</h2>
+        <p>{recipe}</p>
       </div>
     </div>
   );

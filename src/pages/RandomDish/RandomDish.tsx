@@ -15,11 +15,9 @@ export const RandomDish = () => {
     });
   }, []);
 
-  console.log(randomDish);
-
   return (
     <div className="random-dish">
-      <DishCard />
+      <DishCard {...randomDish} />
     </div>
   );
 };

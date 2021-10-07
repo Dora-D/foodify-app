@@ -2,26 +2,33 @@
 @import "../../assets/sass/variables.scss";
 
 .dish-card {
-  height: 440px;
-  width: 350px;
+  height: 470px;
+  width: 370px;
   border-radius: 10px;
-  overflow: hidden;
   background-color: #ffd3b4;
-  img {
-    height: 45%;
-    display: inline-block;
-    object-fit: contain;
+  overflow: hidden;
+  &__img-wrapper {
+    height: 0;
+    padding-top: 60%;
+    position: relative;
+    overflow: hidden;
+    img {
+      height: 120%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
   }
   &__info {
-    padding: 25px 25px;
+    padding: 25px;
     h2 {
-      font-size: 2rem;
+      font-size: 1.3rem;
       margin-bottom: 15px;
       color: $primary;
     }
     p {
       color: $primary;
-      height: 120px;
+      height: 100px;
       overflow: auto;
       @include scroll-style;
     }
