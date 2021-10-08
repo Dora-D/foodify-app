@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-import { IDishes } from "../../static";
+import { IDish } from "../../static";
 import { setDishToLocalStorage } from "../../utils/setDishToLocalStorage";
 import { taransformRecipe } from "../../utils/taransformRecipe.js";
 import { getRandomRecipe } from "../../utils/getRandomRecipe";
 
 export const useRandomDish = () => {
-  const [randomDish, setrandomDish] = useState<IDishes>({
+  const [randomDish, setrandomDish] = useState<IDish>({
+    id: "",
     title: "",
     recipe: "",
   });
