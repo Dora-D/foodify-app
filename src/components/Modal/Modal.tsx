@@ -36,7 +36,10 @@ export const Modal: FC<IModal> = ({ hendleModal, onSubmit }) => {
         </button>
         <h1>Add custom dish</h1>
         <input
-          {...register("title", { required: true, minLength: 3 })}
+          {...register("title", {
+            required: true,
+            validate: (value) => value.trim().length > 2,
+          })}
           type="text"
           placeholder="Dish title"
         />
@@ -44,7 +47,10 @@ export const Modal: FC<IModal> = ({ hendleModal, onSubmit }) => {
           <span>This entry cannot be less than 3 characters</span>
         )}
         <textarea
-          {...register("recipe", { required: true, minLength: 5 })}
+          {...register("recipe", {
+            required: true,
+            validate: (value) => value.trim().length > 4,
+          })}
           placeholder="Dish description..."
         />
         {errors.recipe && (
