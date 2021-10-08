@@ -42,7 +42,7 @@
     p {
       color: $primary;
       height: 100px;
-      overflow: auto;
+      overflow-x: hidden;
       @include scroll-style;
     }
   }
