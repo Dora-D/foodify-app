@@ -11,6 +11,7 @@ export const App: FC = () => (
     <Switch>
       <Route path="/" component={RandomDish} exact />
       <Route path="/favourites" component={Favourites} />
+      <Route component={RandomDish} />
     </Switch>
   </Router>
 );
