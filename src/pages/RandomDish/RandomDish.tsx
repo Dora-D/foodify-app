@@ -1,10 +1,12 @@
+import { FC } from "react";
+
 import { DishCard } from "../../components/DishCard/DishCard";
 import { ButtonGroup } from "../../components/ButtonGroup/ButtonGroup";
 
 import { useRandomDish } from "./useRandomDish";
 import "./random-dish.scss";
 
-export const RandomDish = () => {
+export const RandomDish: FC = () => {
   const { randomDish, onSkip, onLike } = useRandomDish();
   return (
     <div className="random-dish">

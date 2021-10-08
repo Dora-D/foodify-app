@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { createPortal } from "react-dom";
 
 import { DishCard } from "../../components/DishCard/DishCard";
@@ -8,7 +9,7 @@ import { IDish } from "../../static";
 import plusIcon from "../../assets/imgs/plus-icon.svg";
 import "./favourites.scss";
 
-export const Favourites = () => {
+export const Favourites: FC = () => {
   const { favouritesDishes, isModal, portal, onSubmit, hendleModal } =
     useFavourites();
 
