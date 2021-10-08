@@ -5,16 +5,9 @@ import { Link } from "react-router-dom";
 import "./header.scss";
 
 export const Header: FC = () => {
-  const [isMd, setIsMd] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const windowInnerWidth = window.innerWidth;
-
   const portal = document.getElementById("portal") as HTMLElement;
-
-  if (windowInnerWidth < 960 && !isMd) {
-    setIsMd(true);
-  }
 
   const hendleMenu = () => {
     setShowMenu((prev) => !prev);
@@ -23,7 +16,7 @@ export const Header: FC = () => {
   return (
     <header className="header">
       <nav>
-        <ul className={isMd ? "disabled" : ""}>
+        <ul>
           <li>
             <Link to="/">Random Dish</Link>
           </li>
@@ -31,14 +24,12 @@ export const Header: FC = () => {
             <Link to="/favourites">Favourites</Link>
           </li>
         </ul>
-        {isMd && (
-          <button
-            onClick={hendleMenu}
-            className="header__mobile-button mobile-button"
-          >
-            <i className="fas fa-bars"></i>
-          </button>
-        )}
+        <button
+          onClick={hendleMenu}
+          className="header__mobile-button mobile-button"
+        >
+          <i className="fas fa-bars"></i>
+        </button>
       </nav>
       {showMenu &&
         createPortal(<HeaderModal hendleMenu={hendleMenu} />, portal)}

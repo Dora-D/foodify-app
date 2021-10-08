@@ -13,6 +13,9 @@
   }
   ul {
     display: flex;
+    @include tablet {
+      display: none;
+    }
     li:not(:last-child) {
       margin-right: 15px;
     }
@@ -23,8 +26,11 @@
       }
     }
   }
-  .disabled {
+  &__mobile-button {
     display: none;
+    @include tablet {
+      display: block;
+    }
   }
 }
 
