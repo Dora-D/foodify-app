@@ -1,5 +1,6 @@
 @import "../../assets/sass/variables.scss";
 @import "../../assets/sass/mixines.scss";
+@import "../../assets/sass/media.scss";
 
 .modal-overlay {
   height: 100vh;
@@ -18,6 +19,10 @@
   border-radius: 10px;
   background-color: $crads-bg;
   position: relative;
+  @include mobile {
+    width: 100%;
+    border-radius: 0;
+  }
   &__close-modal {
     height: 30px;
     width: 30px;

@@ -1,12 +1,25 @@
 @import "../../assets/sass/mixines.scss";
 @import "../../assets/sass/variables.scss";
+@import "../../assets/sass/media.scss";
 
 .dish-card {
-  height: 470px;
-  width: 370px;
+  height: 450px;
+  width: 340px;
   border-radius: 10px;
   background-color: $crads-bg;
   overflow: hidden;
+  @include laptop {
+    height: 380px;
+    width: 270px;
+  }
+  @include tablet {
+    height: 340px;
+    width: 230px;
+  }
+  @include mobile {
+    height: 360px;
+    width: 250px;
+  }
   &__img-wrapper {
     height: 0;
     padding-top: 60%;
