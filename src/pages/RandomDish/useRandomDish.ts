@@ -6,6 +6,7 @@ import { taransformRecipe } from "../../utils/taransformRecipe.js";
 import { getRandomRecipe } from "../../utils/getRandomRecipe";
 
 export const useRandomDish = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [randomDish, setrandomDish] = useState<IDish>({
     id: "",
     title: "",
@@ -17,8 +18,10 @@ export const useRandomDish = () => {
   }, []);
 
   const getNewRandomRecipe = () => {
+    setIsLoading(true);
     getRandomRecipe().then((data) => {
       setrandomDish(taransformRecipe(data));
+      setIsLoading(false);
     });
   };
 
@@ -31,5 +34,5 @@ export const useRandomDish = () => {
     getNewRandomRecipe();
   };
 
-  return { randomDish, onSkip, onLike };
+  return { randomDish, isLoading, onSkip, onLike };
 };
